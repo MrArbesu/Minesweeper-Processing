@@ -1,5 +1,5 @@
 color backgr;
-PImage tile;
+//PImage tile;
 //width = 1028
 //height = 698
 int numMines = 99;
@@ -11,7 +11,7 @@ bool flagMode = false;
 
 void setup() {
    size(screenWidth, screenHeight);
-   tile = loadImage("Tile_32.JPG");
+   //tile = loadImage("Tile_32.JPG");
    //noStroke();
    textSize(20);
    CreateGrid();
@@ -141,7 +141,8 @@ void DrawGrid(){
                text(SurroundingMines(i,j), boxes[i][j].x + 33/2, boxes[i][j].y + 33/2);
             }
          } else {
-            image(tile, boxes[i][j].x, boxes[i][j].y);
+            //image(tile, boxes[i][j].x, boxes[i][j].y);
+            rect(boxes[i][j].x, boxes[i][j].y, 32, 32);
             if(boxes[i][j].flag){
                fill(0);
                ellipse(boxes[i][j].x + Box.grosor/2, boxes[i][j].y + Box.grosor/2, 20, 20);
